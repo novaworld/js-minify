@@ -1,0 +1,45 @@
+{
+  "name": "@ttungbmt/minify",
+  "version": "0.0.6",
+  "description": "Minify",
+  "license": "MIT",
+  "keywords": [
+    "minify",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Truong Thanh Tung <ttungbmt@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/novaworld/js-minify.git"
+  },
+  "main": "dist/minify.cjs.js",
+  "module": "dist/minify.es.js",
+  "unpkg": "dist/minify.umd.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "dev": "rollup -c -w",
+    "build": "yarn clean && rollup -c --environment NODE_ENV:production",
+    "push": "nodemon -x yalc push"
+  },
+  "dependencies": {
+    "camel-case": "^3.0.0",
+    "clean-css": "^4.2.1",
+    "commander": "^2.20.0",
+    "he": "^1.2.0",
+    "html-minifier": "^4.0.0",
+    "param-case": "^2.1.1",
+    "relateurl": "^0.2.7",
+    "terser": "^4.1.2"
+  },
+  "devDependencies": {
+    "@ttungbmt/module-config": "^0.0.16"
+  },
+  "files": [
+    "dist",
+    "src",
+    "rollup.config.js"
+  ],
+  "sideEffects": false
+}
